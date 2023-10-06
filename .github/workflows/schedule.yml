@@ -10,12 +10,14 @@ jobs:
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2.5.1
+
     
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.11.4  # Specify the Python version you want to use
+   - name: Set up Python
+     uses: actions/setup-python@v2.4.3
+     with:
+    python-version: 3.x  # Specify the Python version you want to use
+
     
     - name: Run Python script
       run: python test.py  # Replace 'your_script.py' with the actual name of your Python script
