@@ -10,14 +10,12 @@ jobs:
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2.5.1
-
+      uses: actions/checkout@v2
     
-   - name: Set up Python
-     uses: actions/setup-python@v2.4.3
-     with:
-    python-version: 3.x  # Specify the Python version you want to use
-
+    - name: Set up Python
+      uses: actions/setup-python@v2.4.3  # Use a version that supports Node.js version 16
+      with:
+        python-version: 3.8  # Specify the Python version you want to use, e.g., Python 3.8
     
     - name: Run Python script
-      run: python test.py  # Replace 'your_script.py' with the actual name of your Python script
+      run: python your_script.py  # Replace 'your_script.py' with the actual name of your Python script
